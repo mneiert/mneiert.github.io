@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1></h1>
+---
+title: "Coffee_Shop_Map"
+output: html_notebook
+runtime: shiny
+---
+December 25th 2017
+```{r setup, include=TRUE, echo=TRUE}
+library(leaflet)
+my_map <- leaflet() %>% addTiles()
+my_map <- my_map %>% addMarkers(lat=44.8490384, lng=-93.7874743, popup = "My Local Coffee Shop")
+my_map
+```
+
+## R Markdown
+
+
+
+```{r, eval=FALSE}
+library(leaflet)
+my_map <- leaflet() %>% addTiles()
+my_map <- my_map %>% addMarkers(lat=44.8490384, lng=-93.7874743, popup = "My Local Coffee Shop")
+my_map
+```
+
+
+
 </body>
 </html>
